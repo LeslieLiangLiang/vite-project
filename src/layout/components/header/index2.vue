@@ -1,28 +1,18 @@
 <template>
   <n-grid h-50 x-gap="12" :cols="4" class="bg-#f6f7f8">
     <n-gi flex items-center>
+      咨询热线：13143336946
+    </n-gi>
+    <n-gi :span="2" flex items-center justify-center>
       <img src="@/assets/images/login_banner.png" height="50" mr10 />
       乐家装饰
     </n-gi>
-    <n-gi :span="2" flex items-center justify-center>
-      <n-input class="search-input" round placeholder="请输入关键字搜索">
-        <template #suffix>
-          <n-icon :component="IconSearch" />
-        </template>
-      </n-input>
+    <n-gi flex items-center> 
+      <n-dropdown trigger="click" :options="menuOptions" @select="handleSelectMenu">
+        <n-button>点击！</n-button>
+      </n-dropdown>
     </n-gi>
-    <n-gi flex items-center> 咨询热线：13143336946 </n-gi>
   </n-grid>
-  <n-menu
-    v-model:value="activeKey"
-    flex
-    items-center
-    justify-center
-    w-full
-    mode="horizontal"
-    :options="menuOptions"
-    @update:value="handleSelectMenu"
-  />
 </template>
 
 <script setup>

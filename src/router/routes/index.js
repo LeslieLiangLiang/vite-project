@@ -1,5 +1,5 @@
 import Layout from '@/layout/index.vue'
-import Home from '@/views/dashboard/index.vue'
+import Home from '@/views/dashboard/index2.vue'
 
 import {
   IconAlert,
